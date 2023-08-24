@@ -1,0 +1,21 @@
+ALGORITHM phrase
+VAR
+    ch=STRING;
+    l,e,v=INTEGER;
+BEGIN
+    l=0
+    e=0;
+    v=0;
+    FOR i FROM 0 TO len(ch) STEP step  DO
+        IF ("A"<ch[i]<"Z" or "a"<ch[i]<"z") THEN
+            l=l+1;
+        END_IF
+        IF (ch[i]==" ") THEN
+            e=e+1;
+        END_IF
+        IF (ch[i] in "aeiouAEIOU") THEN
+            v=v+1;
+        END_IF
+    END_FOR
+    Write("nombre de lettres :",l,"nombre de mots :",e,"nombre de voyelles :",v)
+END
