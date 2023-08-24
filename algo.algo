@@ -6,7 +6,7 @@ BEGIN
     l=0
     e=0;
     v=0;
-    FOR i FROM 0 TO len(ch) STEP step  DO
+    FOR i FROM 0 TO len(ch) STEP 1  DO
         IF ("A"<ch[i]<"Z" or "a"<ch[i]<"z") THEN
             l=l+1;
         END_IF
